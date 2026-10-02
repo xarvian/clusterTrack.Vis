@@ -27,17 +27,32 @@ and create a browsable gallery of saved maps with
 
 ## Installation
 
-`remotes``::`[`install_github`](https://remotes.r-lib.org/reference/install_github.html)`(``'xarvian/clusterTrack.Vis'``)`
+``` r
+
+remotes::install_github('xarvian/clusterTrack.Vis')
+```
 
 ## Interactive maps
 
-[`library`](https://rdrr.io/r/base/library.html)`(`[`clusterTrack`](https://xarvian.github.io/clusterTrack/)`)`` `[`library`](https://rdrr.io/r/base/library.html)`(`[`clusterTrack.Vis`](https://xarvian.github.io/clusterTrack.Vis/)`)`` `` `[`data`](https://rdrr.io/r/utils/data.html)`(``mini_ruff``)`` ``ctdf`` ``=`` `[`as_ctdf`](https://rdrr.io/pkg/clusterTrack/man/as_ctdf.html)`(``mini_ruff``)`` ``|>`` `[`cluster_track`](https://rdrr.io/pkg/clusterTrack/man/cluster_track.html)`(``)`` `[`map`](https://xarvian.github.io/clusterTrack.Vis/reference/map.md)`(``ctdf``)`
+``` r
+
+library(clusterTrack)
+library(clusterTrack.Vis)
+
+data(mini_ruff)
+ctdf = as_ctdf(mini_ruff) |> cluster_track()
+map(ctdf)
+```
 
 [`map()`](https://xarvian.github.io/clusterTrack.Vis/reference/map.md)
 returns a `leaflet` map, so it can be extended with standard `leaflet`
 tools before saving it. Export one or more maps to HTML with:
 
-`out_path`` ``=`` ``"path/to/maps"`` `[`map`](https://xarvian.github.io/clusterTrack.Vis/reference/map.md)`(``ctdf``)`` ``|>`` `[`save_map`](https://xarvian.github.io/clusterTrack.Vis/reference/map.md)`(``path ``=`` ``out_path``)`
+``` r
+
+out_path = "path/to/maps"
+map(ctdf) |> save_map(path = out_path)
+```
 
 For a collection of exported maps,
 [`site()`](https://xarvian.github.io/clusterTrack.Vis/reference/site.md)
@@ -45,7 +60,10 @@ copies a Quarto index template into the output directory. Render the
 resulting `index.qmd` to create an HTML gallery with thumbnails and
 links to the maps:
 
-[`site`](https://xarvian.github.io/clusterTrack.Vis/reference/site.md)`(``out_path``)`
+``` r
+
+site(out_path)
+```
 
 See the [map gallery
 article](https://xarvian.github.io/clusterTrack.Vis/articles/site.html)
