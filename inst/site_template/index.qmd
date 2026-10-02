@@ -1,0 +1,23 @@
+---
+title: "clusterTrack gallery"
+format:
+  html:
+    toc: false
+    page-layout: full
+    embed-resources: true
+---
+
+Edit this .qmd file as needed. Update the `YAML` header (for example the page title and any format: html options), then render the document to produce an HTML page with links to each map.
+
+`prepare_thumbs()` below accepts an `info_text` argument you can use to add per-map notes or metadata.
+
+```{r}
+#| echo: false
+#| message: false
+
+library(data.table)
+library(clusterTrack.Vis)
+
+prepare_thumbs()
+
+```

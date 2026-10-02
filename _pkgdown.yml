@@ -1,0 +1,52 @@
+url: https://xarvian.github.io/clusterTrack.Vis/
+title: clusterTrack.Vis
+
+template:
+  bootstrap: 5
+
+repo:
+  url:
+    home: https://github.com/xarvian/clusterTrack.Vis
+    issue: https://github.com/xarvian/clusterTrack.Vis/issues/
+
+home:
+  title: clusterTrack.Vis
+
+  links:
+  - text: Main clusterTrack package
+    href: https://github.com/xarvian/clusterTrack
+  - text: clusterTrack website
+    href: https://xarvian.github.io/clusterTrack/
+
+navbar:
+  structure:
+    left: [ reference, articles ]
+    right: [ search, github ]
+
+development:
+  mode: auto
+
+reference:
+- title: Mapping clustered tracks
+  desc: Create and save interactive maps from clusterTrack ctdf objects.
+  contents:
+  - map
+  - save_map
+
+- title: Map galleries
+  desc: Build simple browsing pages and thumbnails for saved map outputs.
+  contents:
+  - site
+  - prepare_thumbs
+
+- title: Summaries and diagnostics
+  desc: Summarise clustered tracks and inspect observation timing by cluster.
+  contents:
+  - summarise_ctdf
+  - hist.ctdf
+
+articles:
+- title: Articles
+  navbar: ~
+  contents:
+  - matches(".*")

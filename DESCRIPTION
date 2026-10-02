@@ -1,0 +1,41 @@
+Package: clusterTrack.Vis
+Title: Clustertrack Mapping and Other Visualizations
+Version: 0.0.1
+Authors@R: c(
+    person(
+        given = "Anonymous",
+        family = "Author",
+        role = c("aut", "cre"),
+        email = "293027538+xarvian@users.noreply.github.com"
+    )
+  )
+Description: clusterTrack mapping and other visualizations.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends:
+    R (>= 4.1.0),
+    clusterTrack (>= 0.1.2)
+Remotes:
+    xarvian/clusterTrack    
+Imports: 
+    data.table,
+    ggplot2,
+    glue,
+    htmltools,
+    htmlwidgets,
+    leaflet,
+    leaflet.extras,
+    leaflet.extras2,
+    yyjsonr,
+    sf,
+    stringr,
+    viridisLite
+Suggests:
+    testthat (>= 3.0.0),
+    webshot2
+Config/Needs/website:
+    quarto    
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.0.0
+URL: https://xarvian.github.io/clusterTrack.Vis/
